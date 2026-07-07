@@ -1,15 +1,27 @@
 "use strict";
 
 {
-  function double(num) {
-    return num * 2;
+  // console.log("---------");
+  // console.log("SALE! 50% OFF!");
+  // console.log("---------");
+  // console.log("BREAKING NEWS!");
+  // console.log("Two baby pandas born at our Zoo!");
+  // console.log("---------");
+  // console.log("SALE! 50% OFF!");
+  // console.log("---------");
+
+  function showAd() {
+    console.log("---------");
+    console.log("SALE! 50% OFF!");
+    console.log("---------");
   }
 
-  function triple(num) {
-    return num * 3;
+  function showContent() {
+    console.log("BREAKING NEWS!");
+    console.log("Two baby pandas born at our Zoo!");
   }
 
-  console.log(double(10));
-  // console.log(num);
-  console.log(triple(20));
+  showAd();
+  showContent();
+  showAd();
 }
