@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Playground</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th {
+        font-weight: normal;
+        background: #eee;
+      }
+      th,
+      td {
+        padding: 4px;
+        border: 1px solid;
+      }
+      th:nth-child(1) {
+        width: 180px;
+      }
+      th:nth-child(2) {
+        width: 180px;
+      }
+      td:nth-child(2) {
+        text-align: right;
+      }
+      tr:last-child {
+        font-weight: bold;
+      }
+      input[type="checkbox"] {
+        margin-right: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>商品名</th>
+          <th>価格</th>
+        </tr>
+      </thead>
+      <tbody id="items">
+        <tr>
+          <td>合計 (送料込)</td>
+          <td><span id="total">0</span>円</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>※ 税込価格、送料350円は5,000円以上で無料</p>
+    <script>
+      // 合計金額を0で初期化
+      let total = 0;
+      // 送料を定義するための変数
+      let shipping;
+      // HTMLからitemsというIDを持つテーブル要素を取得
+      const table = document.getElementById("items");
+      // HTMLからtotalというIDを持つspan要素を取得
+      const totalSpan = document.getElementById("total");
+      // 商品データを格納した配列
+      const items = [
+        { name: "Tシャツ", price: 1200 },
+        { name: "カットシャツ", price: 4200 },
+        { name: "靴下", price: 800 },
+        { name: "チノパン", price: 3000 },
+      ];
+
+      // すべての商品データに対して処理を行う
+      items.forEach((item) => {
+        // 新しいtr要素を作成
+        const tr = document.createElement("tr");
+        // 新しいtd要素を作成
+        const nameTd = document.createElement("td");
+        // 商品名のテキストを作成
+        const nameText = document.createTextNode(item.name);
+        // チェックボックスを作成
+        const checkbox = document.createElement("input");
+        // チェックボックスのタイプを設定
+        checkbox.type = "checkbox";
+        // チェックボックスがチェックされたときの処理
+        checkbox.addEventListener("change", () => {
+          // チェックされている場合、合計金額を加算
+          if (checkbox.checked) {
+            total += Number(item.price);
+          } else {
+            // チェックされていない場合、合計金額から減算
+            total -= Number(item.price);
+          }
+          // 合計金額が5000以上または0の場合、送料は0
+          if (total >= 5000 || total === 0) {
+            shipping = 0;
+          } else {
+            // それ以外の場合、送料は350
+            shipping = 350;
+          }
+          // 合計金額と送料を加算し、totalSpanに表示
+          totalSpan.textContent = (total + shipping).toLocaleString();
+        });
+        // 新しいtd要素を作成
+        const priceTd = document.createElement("td");
+        // 価格をテキストとしてtd要素に追加
+        priceTd.textContent = item.price.toLocaleString() + "円";
+        // td要素にチェックボックスと商品名を追加
+        nameTd.appendChild(checkbox);
+        nameTd.appendChild(nameText);
+        // tr要素に商品名のtd要素と価格のtd要素を追加
+        tr.appendChild(nameTd);
+        tr.appendChild(priceTd);
+        // tr要素をテーブルの最後の行の前に挿入
+        table.insertBefore(tr, table.rows[table.rows.length - 1]);
+      });
+    </script>
+  </body>
+</html>

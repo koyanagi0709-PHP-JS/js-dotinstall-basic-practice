@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Playground</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th {
+        font-weight: normal;
+        background: #eee;
+      }
+      th,
+      td {
+        padding: 4px;
+        border: 1px solid;
+        text-align: center;
+      }
+      th:nth-child(1) {
+        width: 40px;
+      }
+      th:nth-child(2) {
+        width: 180px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>名前</th>
+        </tr>
+      </thead>
+      <tbody id="names"></tbody>
+    </table>
+    <script>
+      // 名前の配列を定義
+      const names = [
+        "佐藤",
+        "鈴木",
+        "高橋",
+        "田中",
+        "伊藤",
+        "渡辺",
+        "山本",
+        "中村",
+        "小林",
+        "木村",
+        "吉田",
+        "加藤",
+      ];
+
+      // 配列のすべての要素に対して処理を実行
+      names.forEach((name, index) => {
+        // 新しいtr要素を作成
+        const tr = document.createElement("tr");
+        // インデックス用のtd要素を作成し、インデックスを設定
+        const indexTd = document.createElement("td");
+        indexTd.textContent = index + 1;
+        // 名前用のtd要素を作成し、名前を設定
+        const nameTd = document.createElement("td");
+        nameTd.textContent = name;
+        // インデックス用のtd要素をtr要素に追加
+        tr.appendChild(indexTd);
+        // 名前用のtd要素をtr要素に追加
+        tr.appendChild(nameTd);
+        // tr要素をテーブルのtbody要素に追加
+        document.getElementById("names").appendChild(tr);
+      });
+    </script>
+  </body>
+</html>
