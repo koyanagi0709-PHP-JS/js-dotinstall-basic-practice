@@ -1,14 +1,18 @@
 "use strict";
 
-// console.log(50 + "20");
+const color = prompt("Color?");
 
-const score = Number(prompt("Score?"));
-// console.log(Number(score) + 10);
-
-if (score >= 90) {
-  console.log("A!");
-} else if (score >= 70) {
-  console.log("B!");
-} else {
-  console.log("C!");
+switch (color) {
+  case "red":
+    console.log("Stop!");
+    break;
+  case "yellow":
+    console.log("Slow down!");
+    break;
+  case "blue":
+  case "green":
+    console.log("Go!");
+    break;
+  default:
+    console.log("Wrong color");
 }
