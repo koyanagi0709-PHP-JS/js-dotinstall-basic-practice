@@ -1,9 +1,6 @@
 "use strict";
 
-// My name is Taro Yamada, call me Taro!
+// console.log(50 + "20");
 
-const fname = "Taro";
-const lname = "Yamada";
-
-console.log("My name is " + fname + " " + lname + ", call me " + fname + "!");
-console.log(`My name is ${fname} ${lname}, call me ${fname}!`);
+const n = prompt("Any number?");
+console.log(Number(n) + 10);
