@@ -1,5 +1,10 @@
 "use strict";
 
-const score = Number(prompt("Score?"));
-const result = score > 80 ? "A" : "B";
-console.log(result);
+const english = Number(prompt("English?"));
+const math = Number(prompt("Math?"));
+
+if (!(english >= 80 && math >= 80)) {
+  console.log("A");
+} else {
+  console.log("B");
+}
