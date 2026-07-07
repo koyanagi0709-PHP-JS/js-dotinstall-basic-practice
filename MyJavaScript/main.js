@@ -2,11 +2,18 @@
 
 {
   function calculateTotal(price, amount, rate = 1.1) {
+    // if (amount >= 100) {
+    //   return price * amount;
+    // } else {
+    //   return price * amount * rate;
+    // }
+    // 早期リターン
+    if (amount >= 100) {
+      return price * amount;
+    }
     return price * amount * rate;
   }
 
-  console.log(calculateTotal(100, 10));
-  console.log(calculateTotal(150, 10));
-  console.log(calculateTotal(200, 10));
-  console.log(calculateTotal(120, 10, 1.08));
+  console.log(calculateTotal(100, 100));
+  console.log(calculateTotal(1000, 10));
 }
