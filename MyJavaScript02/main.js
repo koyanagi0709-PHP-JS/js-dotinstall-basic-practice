@@ -3,7 +3,6 @@
 {
   const scores = [70, 90, 80, 85];
 
-  console.log(scores[2]);
-  console.log(scores.length);
+  scores.push(65, 72);
   console.log(scores);
 }
