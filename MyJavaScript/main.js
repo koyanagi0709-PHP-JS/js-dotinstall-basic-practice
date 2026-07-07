@@ -1,27 +1,16 @@
 "use strict";
 
 {
-  // console.log("---------");
-  // console.log("SALE! 50% OFF!");
-  // console.log("---------");
-  // console.log("BREAKING NEWS!");
-  // console.log("Two baby pandas born at our Zoo!");
-  // console.log("---------");
-  // console.log("SALE! 50% OFF!");
-  // console.log("---------");
-
-  function showAd() {
-    console.log("---------");
-    console.log("SALE! 50% OFF!");
-    console.log("---------");
+  console.log(double(10));
+  //関数宣言
+  function double(num) {
+    return num * 2;
   }
 
-  function showContent() {
-    console.log("BREAKING NEWS!");
-    console.log("Two baby pandas born at our Zoo!");
-  }
+  //関数式 無名関数
+  // const double = function (num) {
+  //   return num * 2;
+  // };
 
-  showAd();
-  showContent();
-  showAd();
+  console.log(double(10));
 }
