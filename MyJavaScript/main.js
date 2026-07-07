@@ -2,5 +2,11 @@
 
 // console.log(50 + "20");
 
-const n = prompt("Any number?");
-console.log(Number(n) + 10);
+const score = prompt("Score?");
+// console.log(Number(score) + 10);
+
+if (score >= 90) {
+  console.log("A!");
+} else {
+  console.log("Not A!");
+}
