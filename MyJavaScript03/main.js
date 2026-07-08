@@ -2,10 +2,12 @@
 
 {
   document.querySelector("button").addEventListener("click", () => {
-    document.querySelectorAll("input").forEach((radio) => {
-      if (radio.checked === true) {
-        alert(radio.value);
+    const colors = [];
+    document.querySelectorAll("input").forEach((checkbox) => {
+      if (checkbox.checked === true) {
+        colors.push(checkbox.value);
       }
     });
+    alert(colors.join());
   });
 }
