@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+/* flex */
+.container {
+  display: flex;
+}
+
+.app-container {
+  max-width: 680px;
+  background: pink;
+}

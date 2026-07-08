@@ -1,0 +1,140 @@
+@charset "utf-8";
+@import url("common.css");
+@import url("reset.css");
+
+/* body */
+body {
+  background: #f7f6f2;
+}
+
+/* header */
+header {
+  border-bottom: solid 1px lightgray;
+}
+header > div {
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+
+header > div > a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+header > div > a > svg {
+  color: #01696f;
+}
+
+header h1 {
+  font-size: 18px;
+}
+
+header button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px lightgray;
+  border-radius: 50%;
+  color: #7a7974;
+}
+
+/* main */
+main {
+  max-width: 680px;
+  padding: 12px 0;
+  margin: 0 auto;
+}
+
+/* status-tags */
+#status-tags {
+  margin: 24px 0;
+  gap: 18px;
+  justify-content: start;
+}
+#status-tag-all,
+#status-tag-active,
+#status-tag-done {
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 4px 12px;
+}
+
+#status-tag-all {
+  border: solid 1px;
+  color: #7a7974;
+  background: #f0eeea;
+  border-color: #d4d1ca;
+}
+
+#status-tag-active {
+  color: #01696f;
+  background: rgba(1, 105, 111, 0.1);
+}
+
+#status-tag-done {
+  color: #437a22;
+  background: #d4dfcc;
+}
+
+/* task-form */
+#task-from > div {
+  width: 100%;
+  background: #ffffff;
+  padding: 18px 24px;
+  border: 1px solid #d4d1ca;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px -4px gray;
+  gap: 8px;
+}
+
+#task-input {
+  padding: 12px;
+  border: 1px solid #d4d1ca;
+  background: #f7f6f2;
+  border-radius: 10px;
+  font-weight: 400;
+  flex: 1;
+}
+
+#task-input::placeholder {
+  font-weight: 400;
+  color: #7a7974;
+}
+
+#task-input:focus {
+  outline: none;
+  border-color: #01696f;
+  box-shadow: 0 0 0 3px rgba(1, 105, 111, 0.15);
+}
+
+#task-select {
+  padding: 12px;
+  border: 1px solid #d4d1ca;
+  border-radius: 10px;
+  background: #f7f6f2;
+}
+
+#task-button {
+  padding: 12px;
+  gap: 4px;
+  border: 1px solid;
+  border-radius: 10px;
+  background: #01696f;
+  color: #ffffff;
+  font-weight: 500;
+  align-items: center;
+}
+
+#task-button:hover {
+  background: #0c4e54;
+}
+
+#task-button > svg {
+  stroke: currentColor;
+}
