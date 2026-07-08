@@ -8,3 +8,6 @@
     pElement.textContent = inputElement.value.length;
   });
 }
+
+// input イベントは input,textarea,select
+// change イベントは、checkbox,radio
