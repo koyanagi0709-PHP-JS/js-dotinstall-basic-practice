@@ -1,15 +1,10 @@
 "use strict";
 
 {
-  const d = new Date();
-  console.log(d);
+  // 2000 4 11
+  // const d = new Date(2000, 3, 11);
+  // 2002 2 ??
+  const d = new Date(2000, 2, 0);
+
   console.log(d.toLocaleString());
-  console.log(d.getFullYear());
-  console.log(d.getMonth()); // 0, 1, 2
-  console.log(d.getDate());
-  console.log(d.getHours());
-  console.log(d.getMinutes());
-  console.log(d.getSeconds());
-  console.log(d.getMilliseconds());
-  console.log(d.getDay());
 }
