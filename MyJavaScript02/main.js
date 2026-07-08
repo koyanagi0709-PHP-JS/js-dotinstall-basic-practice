@@ -1,21 +1,15 @@
 "use strict";
 
 {
-  const moreScores = {
-    shiro: 77,
-    goro: 88,
-  };
-  const scores = {
-    taro: 80,
-    jiro: 70,
-    saburo: 90,
-    ...moreScores,
-  };
-  // const { taro, jiro, saburo } = scores;
-  const { taro, ...others } = scores;
+  // let num = 10;
+  // const numBackup = num;
+  // num = 99;
+  // console.log(num);
+  // console.log(numBackup);
 
-  console.log(taro);
-  // console.log(jiro);
-  // console.log(saburo);
-  console.log(others);
+  const nums = [10, 20, 30];
+  const numsBackup = nums;
+  nums[0] = 99;
+  console.log(nums);
+  console.log(numsBackup);
 }
