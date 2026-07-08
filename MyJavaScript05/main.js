@@ -1,10 +1,12 @@
 "use strict";
 
 {
-  // null
-
-  const score = { math: 80, english: 90, physics: null };
-  if (score.physics === null) {
-    console.log("History score not null!");
-  }
+  // typeof
+  console.log(typeof 5); // number
+  console.log(typeof "Hello"); // string
+  console.log(typeof [5, 8]); // object
+  console.log(typeof { math: 80, english: 90 }); // object
+  console.log(typeof true); // boolean
+  console.log(typeof undefined); // undefine
+  console.log(typeof null); // object
 }
