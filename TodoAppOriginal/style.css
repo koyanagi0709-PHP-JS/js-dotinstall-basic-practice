@@ -164,6 +164,13 @@ main {
   flex: 1;
 }
 
+#status-filter button.is-active {
+  padding: 4px 0;
+  border-radius: 8px;
+  background: #01696f;
+  color: #ffffff;
+}
+
 /* task */
 
 /* task-header */
@@ -186,6 +193,12 @@ main {
   font-size: 14px;
   color: #9a9a9a;
   opacity: 0.85;
+}
+
+#task-header > button:hover {
+  background: #ffe6ee;
+  border-color: #ffb6c1;
+  color: #d6336c;
 }
 
 #task-body > article {
@@ -244,6 +257,11 @@ main {
 .task-button {
   color: #9a9a9a;
   opacity: 0.85;
+}
+
+article.complete {
+  opacity: 0.6;
+  text-decoration: line-through;
 }
 
 /* footer */
