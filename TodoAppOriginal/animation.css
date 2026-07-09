@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/* タスク追加時 フェードインのアニメーション定義 */
+
+/* フェードインのアニメーション定義 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(
+      -10px
+    ); /* 少し上からスライドダウンさせる（お好みで） */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* アニメーションを適用するクラス */
+.fade-in {
+  animation: fadeIn 0.7s ease-out forwards; /* 0.4秒かけてふわっと表示 */
+}
+
+/* タスク削除時 */
+
+/* 右へスライドアウトするアニメーション定義 */
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(200px); /* 右に100px移動しながら消える */
+  }
+}
+
+/* アニメーションを適用するクラス */
+.slide-out {
+  animation: slideOutRight 0.5s ease-in forwards; /* 0.6秒で実行 */
+}

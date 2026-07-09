@@ -16,13 +16,13 @@
     const hh = now.getHours(); //時間
     const mm = now.getMinutes(); //分
     const ss = now.getSeconds(); //秒
-    return `${y}-${m}-${d} ${hh}:${mm}:${ss}`;
+    return `${y}-${m + 1}-${d} ${hh}:${mm}:${ss}`;
   }
 
   /* Todo task DOM構築 */
   function createTaskElement(taskText, priority, dateTime) {
     const article = document.createElement("article");
-    article.classList.add("container");
+    article.classList.add("container", "fade-in");
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
@@ -95,7 +95,7 @@
     const dateTime = formatTime();
 
     const task = createTaskElement(taskText, priority, dateTime);
-    taskBody.appendChild(task);
+    taskBody.prepend(task);
 
     taskInput.value = "";
     taskInput.focus();
